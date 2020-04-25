@@ -1,0 +1,154 @@
+.notes-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #f7f7f9;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.notes-header {
+  display: flex;
+  background: #563d7c;
+  color: whitesmoke;
+  font-size: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.add-note-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-note-form textarea {
+  min-height: 200px;
+  resize: vertical;
+  margin: 10px 0px;
+}
+
+.add-note-form input[type="submit"] {
+  width: max-content;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.app-footer {
+  color: whitesmoke;
+  text-align: center;
+  background-color: #322348;
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 20px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.app-footer a {
+  color: whitesmoke;
+}
+
+.note-added-animation {
+  animation: 2s note-added;
+}
+
+.notes-list p {
+  margin: 0 10px 10px;
+}
+.subtask-list p {
+  margin: 0 10px 10px;
+  background: transparent;
+}
+
+.empty-section {
+  margin-top: 10px;
+  animation: empty-section 2s;
+  list-style: none;
+}
+
+.notes-card textarea:read-only,
+input:read-only {
+  border: none;
+  background: transparent;
+  border-left: 2px solid wheat;
+}
+
+.notes-card textarea:not(:read-only) {
+  min-height: 150px;
+}
+
+.notes-card textarea:focus,
+.notes-card input:focus {
+  outline: 2px dashed #28a745;
+}
+
+.subtask-card {
+  background: transparent;
+}
+
+.subtask-card textarea:read-only,
+input:read-only {
+  border: none;
+  background: transparent;
+  border-left: 2px solid wheat;
+}
+
+.subtask-card textarea:not(:read-only) {
+  min-height: 150px;
+}
+
+.subtask-card textarea:focus,
+.notes-card input:focus {
+  outline: 2px dashed #28a745;
+}
+
+section {
+  padding: 10px;
+}
+
+@keyframes empty-section {
+  from {
+    height: 0;
+    width: 100%;
+    border: 2px dashed darkgrey;
+    display: block;
+  }
+  to {
+    height: 180px;
+    display: none;
+    border: 2px dashed darkgrey;
+    display: block;
+  }
+}
+
+@keyframes note-added {
+  0% {
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    max-width: 730px;
+    margin: 0 auto;
+    z-index: 1;
+  }
+  50% {
+    background: #28a745;
+  }
+  100% {
+    background: white;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    max-width: 730px;
+    margin: 0 auto;
+    z-index: 1;
+  }
+}
+
+.subtask {
+  text-align: right;
+}

@@ -1,0 +1,9 @@
+Target 1 achieved.
+Target 2 achieved except highlighting of the  text in each note.
+
+User can create hierarchy of notes, can update, delete and retrieve the same.
+
+The code is responsive
+
+Working on my company laptop. Thats why due to security issues, instead of sharing a git repo sharing the code direclty.
+
